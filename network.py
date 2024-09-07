@@ -123,8 +123,8 @@ def client_connection(data: str, conn: socket.socket, addr):
 def ddb_connection(data: str, conn: socket.socket, addr):
     if data == "get":
         init = DDBInitialization(conn)
-        conn.recv(1024)
         while init in actions: continue
+        return
     while len(actions) == 0: continue
     if actions and isinstance(actions[0], Transaction):
         action = actions[0]

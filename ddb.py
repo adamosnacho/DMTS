@@ -60,6 +60,7 @@ def ddb():
         if tokens[0] == "get":
             print("sending db")
             cs.send(str(db).encode())
+            cs.recv(1024)
         if tokens[0] == "get_bal":
             print("getting balance of user:", tokens[1])
             if tokens[1] in db:
