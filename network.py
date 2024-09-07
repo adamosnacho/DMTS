@@ -1,5 +1,5 @@
 import socket, threading, sys, hashlib
-host = socket.gethostname()
+host = "0.0.0.0"
 port = 5000
 
 server_socket = socket.socket()
