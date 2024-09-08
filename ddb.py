@@ -69,7 +69,7 @@ def ddb():
                 else:
                     cs.send(b"nonexistent id!")
                 cs.recv(1024)
-        catch:
+        except:
             print("error!")
 if __name__ == "__main__":
     ddb()
