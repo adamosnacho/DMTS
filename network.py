@@ -25,7 +25,7 @@ class Transaction(Action):
         self.denied = 0
         self.deny_reason = ""
         super().add()
-        threading.Timer(0.5, self.resolve).start()
+        threading.Timer(0.2, self.resolve).start()
 
     def resolve(self):
         if not self.res:
@@ -52,7 +52,7 @@ class Registration(Action):
         self.denied = 0
         self.deny_reason = ""
         super().add()
-        threading.Timer(0.5, self.resolve).start()
+        threading.Timer(0.2, self.resolve).start()
 
     def resolve(self):
         if not self.res:
@@ -75,7 +75,7 @@ class DDBInitialization(Action):
         self.sent = False
         self.versions: dict[str, int] = {}
         super().add()
-        threading.Timer(0.5, self.resolve).start()
+        threading.Timer(0.2, self.resolve).start()
 
     def resolve(self):
         if not self.sent:
@@ -94,7 +94,7 @@ class GetBalance(Action):
         self.sent = False
         self.versions: dict[str, int] = {}
         super().add()
-        threading.Timer(0.5, self.resolve).start()
+        threading.Timer(0.2, self.resolve).start()
 
     def resolve(self):
         if not self.sent:
