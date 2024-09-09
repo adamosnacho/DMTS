@@ -5,7 +5,7 @@ if len(sys.argv) == 1:
     host = input("network ip -> ")
 else:
     host = sys.argv[1]
-port = 5000
+port = 4451
 
 db: dict[str, [str, int]] = {
     "admin": [hashlib.sha256(b"admin123.").hexdigest(), 1000]
