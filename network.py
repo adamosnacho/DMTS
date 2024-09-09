@@ -1,6 +1,6 @@
 import socket, threading, sys, hashlib
 host = "0.0.0.0"
-port = 5000
+port = 4451
 
 server_socket = socket.socket()
 server_socket.bind((host, port))
