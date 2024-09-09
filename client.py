@@ -4,7 +4,7 @@ if len(sys.argv) == 1:
     host = input("network ip -> ")
 else:
     host = sys.argv[1]
-port = 5000
+port = 4451
 
 def client():
     print("transaction <your public address> <destination public address> <your secret> <amount>")
